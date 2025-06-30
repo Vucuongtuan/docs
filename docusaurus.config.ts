@@ -10,7 +10,7 @@ const config: Config = {
   favicon: "img/favicon.ico",
   noIndex: true,
   // Set the production url of your site here
-  url: "https://dev.wowweekend.vn/",
+  url: "https://staging.wowweekend.vn/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -77,7 +77,7 @@ const config: Config = {
           label: "Documentation"
         },
         {
-          href: "https://dev.wowweekend.vn/",
+          href: "https://staging.wowweekend.vn/",
           label: "WOWWEEKEND"
         }
       ]
@@ -120,7 +120,7 @@ const config: Config = {
     [
       require.resolve("docusaurus-lunr-search"),
       {
-        languages: ["vi"]
+        languages: ["vi", "en"]
       }
     ],
     "plugin-image-zoom"
