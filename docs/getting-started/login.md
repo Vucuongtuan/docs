@@ -5,9 +5,9 @@ sidebar_position: 1
 
 # Log In to the system
 
-To log in to the system, go to the following URL: https://dev.wowweekend.vn/admin/login
+To log in to the system, go to the following URL: https://staging.wowweekend.vn/admin/login
 
-Please enter the account credenticals provided by our team to access to CMS.
+Please enter the account credentials provided by our team to access to CMS.
 
 :::danger NOTE
 If you fail to log in **five times**, your account will be locked for **10 minutes**.
