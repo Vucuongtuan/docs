@@ -8,7 +8,7 @@ const config: Config = {
   title: "WOWWEEKEND DOCS",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
-
+  noIndex: true,
   // Set the production url of your site here
   url: "https://dev.wowweekend.vn/",
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -17,8 +17,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "idmvn", // Usually your GitHub org/user name.
+  projectName: "wowweekend-docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -28,7 +28,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "vi"],
+    locales: ["en", "vi"]
   },
 
   presets: [
@@ -36,23 +36,23 @@ const config: Config = {
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: "./sidebars.ts"
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
-            xslt: true,
+            xslt: true
           },
           onInlineTags: "warn",
           onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
+          onUntruncatedBlogPosts: "warn"
         },
         theme: {
-          customCss: "./src/css/custom.css",
-        },
-      } satisfies Preset.Options,
-    ],
+          customCss: "./src/css/custom.css"
+        }
+      } satisfies Preset.Options
+    ]
   ],
 
   themeConfig: {
@@ -62,41 +62,41 @@ const config: Config = {
         "🚨 After logging in successfully, the CMS will only display the features that your account is authorized to use. Not all users will have access to every functionality described here. 🚨",
       backgroundColor: "#263238",
       textColor: "#ffe082",
-      isCloseable: true,
+      isCloseable: true
     },
     navbar: {
       logo: {
         alt: "WWK Logo",
-        src: "https://wvn.hcm.ss.bfcplatform.vn/uploads/logoAvatar.svg",
+        src: "https://wvn.hcm.ss.bfcplatform.vn/uploads/logoAvatar.svg"
       },
       items: [
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Documentation",
+          label: "Documentation"
         },
         {
           href: "https://dev.wowweekend.vn/",
-          label: "WOWWEEKEND",
-        },
-      ],
+          label: "WOWWEEKEND"
+        }
+      ]
     },
     footer: {
       style: "dark",
 
-      copyright: `Copyright © ${new Date().getFullYear()} WOWWEEKEND, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} WOWWEEKEND. Built with Docusaurus.`
     },
     prism: {
       theme: prismThemes.github, // Light theme
-      darkTheme: prismThemes.dracula, // Dark theme
+      darkTheme: prismThemes.dracula // Dark theme
     },
     imageZoom: {
       // CSS selector to apply the plugin to, defaults to '.markdown img'
-      selector: ".markdown img",
+      selector: ".markdown img"
       // Optional medium-zoom options
       // see: https://www.npmjs.com/package/medium-zoom#options
-    },
+    }
   } satisfies Preset.ThemeConfig,
 
   headTags: [
@@ -104,27 +104,27 @@ const config: Config = {
       tagName: "link",
       attributes: {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap",
-      },
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      }
     },
 
     {
       tagName: "link",
       attributes: {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap",
-      },
-    },
+        href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap"
+      }
+    }
   ],
   plugins: [
     [
       require.resolve("docusaurus-lunr-search"),
       {
-        languages: ["vi"],
-      },
+        languages: ["vi"]
+      }
     ],
-    "plugin-image-zoom",
-  ],
+    "plugin-image-zoom"
+  ]
 };
 
 export default config;
