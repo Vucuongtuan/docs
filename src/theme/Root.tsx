@@ -1,8 +1,6 @@
-
-
-
 import React, { useActionState, useState } from 'react';
 import './style.css'
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const accessAllowedEmails = [
     "thanh.huynh@idm.vn",
@@ -13,12 +11,12 @@ const accessAllowedEmails = [
     "kimngan.vo@wowweekend.com",
     "vananh.nguyen@wowweekend.com",
     "admin@gmail.com",
-]
+];
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-export default function Root({ children }: { children: React.ReactNode }) {
+function RootClient({ children }: { children?: React.ReactNode }) {
     const [isError, setIsError] = useState(false);
-    const actionAccess = localStorage.getItem('wwkDocsAccess')
+    const actionAccess = typeof window !== 'undefined' ? localStorage.getItem('wwkDocsAccess') : null;
     const [state, formAction, isPending] = useActionState(async (prev, formData) => {
         await delay(3000);
         const emailValue = formData.get('email');
@@ -30,21 +28,16 @@ export default function Root({ children }: { children: React.ReactNode }) {
             setIsError(true)
             return false;
         }
-        localStorage.setItem('wwkDocsAccess', 'true')
-        setIsError(true)
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('wwkDocsAccess', 'true');
+        }
+        setIsError(false)
         return true;
-
-    }, false)
-
+    }, false);
 
     if (!state && (!actionAccess || actionAccess !== 'true')) {
         return <div className="form-container">
             <div className="form-card">
-                {/* <div className="form-header">
-                    <h2 className="form-title">Email Subscription</h2>
-                    <p className="form-description">Enter your email to get started</p>
-                </div> */}
-
                 <form action={formAction} className="form">
                     <div className="input-group">
                         <label htmlFor="email" className="input-label">
@@ -98,4 +91,12 @@ export default function Root({ children }: { children: React.ReactNode }) {
     }
 
     return <>{children}</>;
+}
+
+export default function Root({ children }: { children: React.ReactNode }) {
+    return (
+        <BrowserOnly>
+            {() => <RootClient>{children}</RootClient>}
+        </BrowserOnly>
+    );
 }
