@@ -1,0 +1,146 @@
+---
+title: Website
+---
+
+import ColorBox from "@site/src/components/ColorBox";
+
+# Introduction on Website Settings
+
+The `Website Settings` global config allows management of the general information, navigational structure, and advertisement display across the WWK website.
+
+## Global
+
+### Maintenance Mode (sidebar)
+
+Enable this option to take the site offline for maintenance. Only admin users will still be able to access the CMS.
+
+![Maintenance Mode](https://wvn.hcm.ss.bfcplatform.vn/uploads/settings-web-sidebar.png)
+
+## General
+
+This section is used to manage basic site information and social media links.
+
+### Basic use
+
+- Go to **Settings** > **Website** from sidebar .
+- Open the General tab.
+- Edit fields such as site title ,description,Social links
+
+### Detailed Field Explanation
+
+This is a overview fields on General tab.
+
+![overview General](https://wvn.hcm.ss.bfcplatform.vn/uploads/settings-web-general.png)
+
+#### 1. Title
+
+Then name of the site displayed on browser tabs and used in **Meta Data(SEO)**.
+
+#### 2. Description
+
+A short description of the website, usefull for search engines and preview snippet .
+
+#### 3. Social links
+
+List of links to offcial social media platform . Each item includes:
+
+- URL: full link social to the platform.
+- Type: select one platform Facebook,Instagram,Youtube,Twitter.
+
+Used for social links in the footer
+
+![footer social](https://wvn.hcm.ss.bfcplatform.vn/uploads/settings-web-social.png)
+
+## Navigation
+
+This section is where you manage the site’s main and secondary menu structure.
+
+### Basic use
+
+- Go to **Settings** > **Website** from sidebar .
+- Open the Navigation tab.
+- Click `Add Primary` or `Add Secondary` to create new menu links.
+- Add items and optional nested links.
+
+### Detailed Field Explanation
+
+- Primary Menu: Main header menu.
+- Secondary Menu: Optional menu, usually in the footer.
+- Each menu item includes:
+  - **Link**: Choose between an Internal link (link to a page on the site) or a Custom link (external URL).
+  - **Link**: Display name of the link.
+  - **Open in tab**: Whether to open the link in a new browser tab.
+  - **Children**: Add nested submenu items. If Children are present, the parent menu item will appear as a dropdown menu on the website.
+
+### Preview on Website
+
+Menus appear in the site header and footer depending on the current layout.
+
+#### Header menu
+
+![preview navigation](https://wvn.hcm.ss.bfcplatform.vn/uploads/settings-web-nav.png)
+
+#### Footer menu
+
+![preview navigation footer](https://wvn.hcm.ss.bfcplatform.vn/uploads/settings-web-nav-footer.png)
+
+## Advertisement
+
+This section controls the global ad banners shown across different areas of the site.
+
+Ads configured here must meet both conditions:
+
+- Only ads with position set to vertical are used.
+- The ad must still be valid (its end date hasn't passed).
+
+### How It Works
+
+Each tab corresponds to where ads will be displayed:
+
+- Home → Displayed at the top of the homepage (above header).
+- Pages → Displayed at the top of static content pages.
+- Articles → Displayed on article detail pages.
+- Categories → Optional per-category overrides.
+
+### Basic Use
+
+- Go to Settings > Website.
+- Open the Advertisement tab.
+- Select a tab (e.g., Home, Pages) to configure ads.
+
+### Detailed Field Explanation
+
+#### 1. Ad Mode
+
+Choose how ads from the list are shown:
+
+- Exclude: Alway show the first valid ad in **Ad Data**
+- Random: Each tiem the site loads,a random valid ad is show form the list **Ad Data**.
+
+#### 2. Ad Data
+
+- You can add multiple ad entries.
+- Each ad item must:
+  - Be from the `Ads` collection.
+  - Have position set to **vertical**.
+  - be valid (not expired).
+
+#### 3. Individual overrides (only in Categories tab)
+
+A checkbox called Individual Overrides appears in the **Categories** tab. Enabling it will display a field called **Category Overrides**, allowing different ads for specific categories.
+Each override includes:
+
+- **Label**: Internal label.
+- **Category**: Relationship to a category.
+- **Ad Mode and Ad Data**: Same behavior as global.
+
+> When enabled, the system checks if a category-specific override is available. If yes, it uses that instead of the global category ad.
+
+### Preview on website
+
+![ads render preview](https://wvn.hcm.ss.bfcplatform.vn/uploads/settings-web-ad.png)
+
+## Version
+
+The Version section stores a history of changes made to the global settings, allowing you to track updates and restore previous versions.  
+It works similarly to the versioning in the Pages or Posts collections [see details there](/docs/manage/posts#versions).

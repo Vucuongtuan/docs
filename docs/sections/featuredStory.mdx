@@ -1,0 +1,99 @@
+---
+title: Featured Story
+---
+
+import ColorBox from "@site/src/components/ColorBox";
+
+# Introduction for Featured Story
+
+The `Featured Story` section allows you to highlight a specific **Post(story)** on your page.
+
+You can either let the system automatically pick the most recent published post or manually select a post of your choice.
+
+This is used for showcasing important or trending content in a prominent layout.
+
+## Basic Usage
+
+1. Click on `Add Section` in the editor.
+2. Choose `Featured Story` from the list of available sections.
+3. Select a mode:
+   - `Auto latest`: Automatically displays the latest published post.
+   - `Manual`: Manually select a post from the list.
+4. (Optional) Enable or disable related articles and ads.
+
+![Add Featured Story Section](https://wvn.hcm.ss.bfcplatform.vn/uploads/add-featured-story-section.png)
+
+:::warning NOTE
+All require fields are marked with (<ColorBox color="red" type="text">\*</ColorBox>)
+
+    If you select **Manual** mode ,you must choose a article from `Post` Collection.
+
+:::
+
+## Detailed Field Explanation
+
+This is an overview of the fields in the `Featured Story` section.
+
+![Overview Featured Story](https://wvn.hcm.ss.bfcplatform.vn/uploads/overview-featured-story-1.png)
+
+### 1. Mode
+
+> Select how the featured post is determined - automatically or manually.
+
+- **Auto latest**: The system will automatically select the recently published post.
+- **Manual**: You manually select a post from the list.
+
+:::tip
+If you select **Manual**, an additional `Post` field will appear below.
+:::
+
+### 2. Post _(Visible only if `mode = manual`)_
+
+> Allows you tu select a specific post from the `Posts` Collection.
+
+- Only visible when **Manual** mode is selected.
+- Only posts with the status `published` will be available for selected.
+
+### 3. Show Related Articles
+
+> Toggle to show or hide related articles below the featured story.
+
+- If enabled checkbox, the system will find up to 3 related posts based on shared `category` and `tags`.
+- If disable checkbox, no related articles will be displayed.
+- This feature helps increase user engagement by recommend relevant content.
+
+### 4. Enable Ads
+
+> Toggle to enable ad content in this section.
+
+- If enabled checkbox, the `Ads` group of fields will appear.
+- If disable checkbox, the `Ads` group of fields will not appear.
+- When this option is disable checkbox, ads will not be shown in the CMS and will not be rendered on the website interface.
+
+### 5. Ads _(Visible only if `Enable Ads` is checked)_
+
+> This group let you add ad content that show next to the featured story.
+
+- **Ad Data**:
+  This is a list of Ads you want to show . - Each item lets you select one ad from `Ads` Collection. - The system automatically filter the lisst to only show ads that: - Have `position` set to `vertical`. - Are still valid (between `startAt` and `endAt`). - If no ad selected,nothing will be show on the website.
+
+- **Ad Mode** :
+  Control how the selected ads will appear on the website: - **Exclusive**: Show only the **first valid** ad in the list **Ad Data** - **Stacked**: Show **all valid** ads in a vertical layout. - **Random**: Show **one random valid** ad each time the page is loaded. - **Rotate** : Rotate between **ads valid** changing every 30 seconds.
+
+:::tip NOTE
+If an ad is selected but becomes **expired** in the future, it will no longer appear on the site — but will remain in the CMS until manually deleted.
+:::
+
+## Preview on website
+
+After configuring this section is the CMS, the **Featured Story** section will be displayed on the pages website in the following format:
+
+> The example bellow is taken from the **Home** page that is usesing the **Featured Story** section.
+
+### CMS interface
+
+![Preview Featured Story on CMS](https://wvn.hcm.ss.bfcplatform.vn/uploads/preview-featured-story-cms.png)
+
+### Website interface
+
+![Preview Featured Story on website](https://wvn.hcm.ss.bfcplatform.vn/uploads/preview-featured-story-website.png)

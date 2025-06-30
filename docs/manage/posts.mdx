@@ -1,0 +1,299 @@
+---
+title: Posts
+sidebar_position: 1
+---
+
+# Manage Posts
+
+## Overview
+
+In this section, you can create, update and manage all posts available on the website.
+
+To view an overview of the table list and common content management opearations such as creating, searching, and more, please refer to [this section](../getting-started/overview#collections).
+
+## Fields
+
+![Post overview](https://wvn.hcm.ss.bfcplatform.vn/uploads/create-post-v2.png)
+
+:::danger NOTE
+If there is a `*` behide the field name, that field is **required**.
+:::
+
+Next, we will go into detail about each field:
+
+#### 1. Title
+
+The title is the main heading of the post. The post title appears in some places such as:
+
+In **Home Page**
+![Post title in Home](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-title-in-home.png)
+
+In **Article Detail**
+![Post title in Home](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-title-article-detail.png)
+
+And anywhere the post is displayed.
+
+#### 2. Excerpt
+
+Excerpt is the short summary that helps readers understand the post content.
+
+Unlike the title, the excerpt is only displayed in certain places, such as the **Home Page**.
+
+![Post excerpt](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-excerpt.png)
+
+#### 3. Content
+
+You can write the detailed content of post here.
+
+We provide a **rich text** editor that allows you to create headings, media, text styles, and more.
+
+For more detail abour **rich text**, refer [this section](/docs/sections/richtext#4-text-editor).
+
+#### 4. Slug
+
+The slug is the URL-friendly identifier of post. And in the website, we use the slug along with `.html` to determine a post's URL.
+
+![Post slug](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-slug.png)
+:::tip TIP
+The slug can be **auto-generated** from **title**. So, when creating a new post, you can leave the slug field empty.
+:::
+
+:::danger NOTE
+Slug must be **unique**. If you create a slug that already exists, the system will return an error.
+:::
+
+#### 5. Thumbnail
+
+You can upload the post thumbnail here.
+
+You can **Create new**, **Choose from existing**, or **Drag and Drop** a file.
+
+When you **Create new**, you can either **Select a file** or **Paste URL**. Additionally, you can set the **Alt** text and **Caption** when selecting the image.
+
+After successfully selecting an image, you have two available actions:
+
+![Post thumbnail actions](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-thumbnail-operations.png)
+
+| No.   | Component | Description                                                                                       |
+| ----- | --------- | ------------------------------------------------------------------------------------------------- |
+| **1** | Update    | Update the current image. For more detail, refer [this section](/docs/manage/media#modify-media). |
+| **2** | Delete    | Remove the current image.                                                                         |
+
+Example of thumbnail interface:
+
+![Post thumbnail](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-thumbnail-v2.png)
+
+:::info INFO
+You don't need to worry about image quality on different screen sizes.
+
+Simply upload **the largest version** of the thumbnail (we recommend a minimum width of **1920px** — and note that the maximum file size is **2MB**) – our system will automatically resize it to fit various devices.
+:::
+
+---
+
+:::tip TIP
+If you're concerned that the key visual may be cropped or missed when resizing the thumbnail, you can set a **focal point** to control how the image is displayed.
+
+Click the **Edit** button as shown below:
+
+![Edit image button](https://wvn.hcm.ss.bfcplatform.vn/uploads/edit-image-button.png)
+
+Next, click **Edit Image** in the popup:
+
+![Edit image form](https://wvn.hcm.ss.bfcplatform.vn/uploads/edit-image-form.png)
+
+After that, refer to [this section](/docs/manage/media#focal-point) to adjust the focal point.
+:::
+
+#### 6. Category
+
+You can assign categories for the post here. Multiple categories can be selected.
+
+![Post category](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-category-v2.png)
+
+To choose a category more quickly, you can type the category name into the selection field.
+
+![Post category typing](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-category-typing-v2.png)
+
+If the category you want doesn't exist, you can click `+` next to the **Category select** to quickly create a news category .
+
+![Post create category](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-create-category.png)
+
+#### 7. Tags
+
+You can assign tags for the post here. Multiple tags can be selected.
+
+![Post tags](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-tag-v2.png)
+
+Similar the category field, type the tag name in the input box to select faster or click `+` to quickly create a new tag.
+
+:::info INFO
+You must assign tags to the post **accurately**, meanings you only create a new tag if it doesn't already exist in the CMS. This is very important because tags are used to recommnend the related posts in the infinite scroll feature.
+:::
+
+#### 8. Author
+
+The author is a person who creates the post.
+
+![Post author](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-author-v2.png)
+
+Similar the category field, type the author name in the input box to select faster or click `+` to quickly create a new author.
+
+#### 9. Photo Credit
+
+The photo credit is the source or credit for the photo used.
+
+---
+
+## Live Preview
+
+Live Preview allows you to see how the post will appear on the website in real time.
+
+To open Live Preview mode, click **Live Preview** as shown below:
+
+![Post live preview](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-live-preview.png)
+
+---
+
+After enabling it, the post preview will appear next to the form:
+
+![Post live preview appear](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-live-preview-appear.png)
+
+At the top of the preview panel, you can adjust the width, height, zoom percentage, or open the preview in a new tab:
+
+![Post live preview utilities](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-live-preview-utilities.png)
+
+To return to edit mode, simply click **Edit** as shown below.
+
+![Post return edit mode](https://wvn.hcm.ss.bfcplatform.vn/uploads/return-edit-mode.png)
+
+---
+
+## Save Draft & Publish Changes
+
+After filling out all the fields, you have **two** options: **Save Draft** or **Publish Changes**.
+
+![Post save publish](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-save-publish-1.png)
+
+1. **Save Draft**: Allows you to save the changes as a **draft**. These changes will not be visible on the website yet.
+2. **Publish Changes**: Allows you to publish the updates to the website.
+
+The current status of the post is displayed in the top-right corner of the editor:
+
+- **Draft**  
+  ![Draft status](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-draft-v2.png)
+
+- **Published**  
+  ![Published status](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-publish-v2.png)
+
+:::info INFO
+When a post is in **Published** status, you will see an **Unpublish** button next to the status label.  
+Clicking **Unpublish** will revert the post to **Draft** status, meaning the content will **no longer be visible on the website**.  
+If you want to make the post visible again, simply click **Publish Changes** to set it back to **Published**.
+:::
+
+---
+
+## Versions
+
+Versions keep a **history** of all changes you have made.
+
+Whenever you **Save Draft** or **Publish Changes**, the system automatically creates a version of the post.
+
+To access the version list, click **Versions**, as shown below.
+
+![Post version button](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-version-button.png)
+
+After that, you'll see a list of all saved versions. Each version includes the **Updated At** time, **Version ID**, and **Status**.
+
+To view a specific version in detail, click the **Updated At** value of that version.
+
+![Post version item](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-version-item.png)
+
+You will then see the differences between the selected version and the previously selected version.
+
+![Post version different](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-version-different.png)
+
+To restore the post to the selected version, click **Restore this version**, as shown below.
+
+![Post version restore](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-version-restore.png)
+
+To return to edit mode, simply click **Edit** as shown below.
+
+![Post return edit mode](https://wvn.hcm.ss.bfcplatform.vn/uploads/return-edit-mode.png).
+
+---
+
+## Schedule Publish
+
+You can use the **Schedule Publish** feature to schedule a future **publish** or **unpublish** action for a post.  
+At the specified time, the post will be automatically published or unpublished.
+
+To use it, click the small arrow next to the **Publish Changes** button, then select **Schedule Publish**.
+
+![Post schedule publish button](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-schedule-publish-button.png)
+
+You will then see a form where you can configure the schedule.
+
+![Post schedule publish form](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-schedule-publish-form.png)
+:::danger NOTE
+If there is a `*` behide the field name, that field is **required**.
+:::
+
+| No.   | Component | Description                                     |
+| ----- | --------- | ----------------------------------------------- |
+| **1** | Type      | Choose whether to **Publish** or **Unpublish**. |
+| **2** | Time      | The date and time when the action should occur. |
+
+After entering the necessary information, click **Save** to create a new scheduled event.
+
+You can view all the events you’ve scheduled:
+
+![Post upcoming events](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-upcoming-events.png)
+
+To delete a specific event, click the `X` in the **Delete** column.
+
+![Post delete events](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-delete-events.png)
+
+---
+
+## Delete
+
+To delete a post entry, you need to click on the `⋮` button located next to the **Publish changes** button. This will open a dropdown menu with **delete** options.
+
+In this menu, select Delete to remove the current post record.
+
+:::warning NOTE
+Deleting an entry is a permanent action. Please double-check before proceeding to ensure you are removing the correct item.
+:::
+
+![Post delete](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-delete-1.png)
+
+---
+
+## Additional Operations
+
+In addition to basic features, the system provides extra operations, such as **Create new entry**, **Duplicate**.
+
+Similar to the delete flow, you need to click on the `⋮` button located next to the **Publish changes** button to open a dropdown menu with additional options.
+
+![Additional options](https://wvn.hcm.ss.bfcplatform.vn/uploads/additional-options.png)
+
+| No.   | Component  | Description                                                              |
+| ----- | ---------- | ------------------------------------------------------------------------ |
+| **1** | Create new | Create a new entry.                                                      |
+| **2** | Duplicate  | Create a similar entry by reusing content, useful for minor adjustments. |
+
+---
+
+## SEO
+
+**SEO (Search Engine Optimization)** is the practice of optimizing your website’s content and structure to help Google and other search engines better understand your content and display it more prominently in search results.
+
+![Post SEO](https://wvn.hcm.ss.bfcplatform.vn/uploads/post-seo-v2.png)
+
+| No. | Field       | Description                                                                                                                      |
+| --- | ----------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Title       | The title displayed in search results (Google, Facebook, etc.). Can be auto-generated from the post title using `Auto-generate`. |
+| 2   | Description | A short description shown below the title in search results. Can be auto-generated from the post excerpt using `Auto-generate`.  |
+| 3   | Meta Image  | The preview image shown when sharing the post link on social platforms (Facebook, Zalo, etc.).                                   |

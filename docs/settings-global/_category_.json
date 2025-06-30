@@ -1,0 +1,8 @@
+{
+  "label": "Global Settings",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Settings that apply globally across the WOWWEEKEND website and mobile app"
+  }
+}
